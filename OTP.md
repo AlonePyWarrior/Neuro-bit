@@ -303,7 +303,7 @@ path("accounts/", include("accounts.urls")),
 ---
 
 ## ۱۰. نکات امنیتی و بهترین رویه‌ها
-
+<div dir="rtl">
 1. **محدودیت درخواست**: با `django-ratelimit` یا middle­ware سفارشی، ارسال بیش‌ازحد OTP را ببندید.
 2. **ارسال غیربلاکینگ**: پیامک را در Background با Celery + Redis اجرا کنید؛ ویو شما سریع پاسخ می‌دهد.
 3. **رمزنگاری OTP**: برای تولید رمز به جای `randint` از `secrets.randbelow` استفاده کنید.
@@ -314,7 +314,7 @@ path("accounts/", include("accounts.urls")),
    * ارسال OTP → ایجاد رکورد و تماس با Kavenegar
    * اعتبارسنجی OTP معتبر و منقضی
 7. **استفاده از مدل Cache**: در مقیاس بالا، OTP را در Redis ذخیره کنید تا جدول کاربر قفل نشود.
-
+</div>
 ---
 
 ## ۱۱. سناریوهای توسعه‌ای
